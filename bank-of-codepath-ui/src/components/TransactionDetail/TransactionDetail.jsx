@@ -1,13 +1,13 @@
-import * as React from "react"
-import { formatAmount, formatDate } from "../../utils/format"
-import "./TransactionDetail.css"
+import * as React from "react";
+import { formatAmount, formatDate } from "../../utils/format";
+import "./TransactionDetail.css";
 
 export default function TransactionDetail() {
   return (
     <div className="transaction-detail">
       <TransactionCard />
     </div>
-  )
+  );
 }
 
 export function TransactionCard({ transaction = {}, transactionId = null }) {
@@ -23,9 +23,11 @@ export function TransactionCard({ transaction = {}, transactionId = null }) {
       </div>
 
       <div className="card-footer">
-        <p className={`amount ${transaction.amount < 0 ? "minus" : ""}`}>{formatAmount(transaction.amount)}</p>
+        <p className={`amount ${transaction.amount < 0 ? "minus" : ""}`}>
+          {formatAmount(transaction.amount)}
+        </p>
         <p className="date">{formatDate(transaction.postedAt)}</p>
       </div>
     </div>
-  )
+  );
 }
