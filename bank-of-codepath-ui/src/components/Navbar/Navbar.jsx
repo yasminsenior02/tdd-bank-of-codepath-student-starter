@@ -1,8 +1,9 @@
-import * as React from "react"
-import FilterInput from "../FilterInput/FilterInput"
-import codepath from "../../assets/codepath.svg"
-import avatar from "../../assets/avatar.png"
-import "./Navbar.css"
+import * as React from "react";
+import FilterInput from "../FilterInput/FilterInput";
+import codepath from "../../assets/codepath.svg";
+import { Link } from "react-router-dom";
+import avatar from "../../assets/avatar.png";
+import "./Navbar.css";
 
 export default function Navbar() {
   return (
@@ -27,7 +28,7 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-  )
+  );
 }
 
 export function Logo() {
@@ -35,5 +36,5 @@ export function Logo() {
     <a className="logo">
       <img src={codepath} alt="logo" />
     </a>
-  )
+  );
 }
